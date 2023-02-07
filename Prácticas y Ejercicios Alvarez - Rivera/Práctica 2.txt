@@ -1,0 +1,47 @@
+Realizado por: Alvarez Esqueda Yasser Francisco
+
+Práctica 2: Mapas de la base de datos
+
+  void main() {
+
+    Map <String, dynamic> usuarios = {
+      'id' : '',
+      'matricula' : 0,
+      'contrasena' : '',
+      'nombre' : '',
+      'correo' : '',
+      'rol' : '',
+      'descuento' : false,
+      'reportes' : 0,
+    };
+    
+      Map <String, dynamic> menu = {
+      'id' : '',
+      'nombre' : '',
+      'descripcion' : '',
+      'precio' : 0,
+      'tipo' : [],
+      'descuento' : false,
+      'id_variacion' : '',
+      'imagen' : '',
+    };
+      
+      Map <String, dynamic> menuVariaciones = {
+      'id' : '',
+      'nombre' : '',
+      'descripcion' : '',
+      'cantidad' : 0,
+    };
+      
+      Map <String, dynamic> ordenes = {
+      'id' : '',
+      'num_orden' : '',
+      'estatus' : [],
+      'costo' : 0,
+      'fecha_hora' : '',
+      'reporte' : 0,
+      'id_usuario' : '',
+    };
+
+    
+  }

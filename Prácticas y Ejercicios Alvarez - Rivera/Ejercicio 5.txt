@@ -1,0 +1,34 @@
+Ejercicio: Mapas
+    void main() {
+
+      Map persona = {
+        'nombre' : 'Yasser',
+        'edad' : 22,
+        'soltero' : false,
+        true : false,
+        1 : 100,
+        2: 500
+      };
+      
+      print(persona);
+      
+    }
+
+    void main() {
+
+      //<Izquierda,Derecha>
+      //<String,dinamic>
+      Map<dynamic, dynamic> persona = {
+        'nombre' : 'Yasser',
+        'edad' : 22,
+        'soltero' : false,
+        true : false,
+        1 : 100,
+        2: 500
+      };
+      
+      persona.addAll({'segundoNombre' : 'Francisco'});
+      
+      print(persona);
+      
+    }

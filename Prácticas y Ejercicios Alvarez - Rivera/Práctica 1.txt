@@ -1,0 +1,13 @@
+Realizado por: Alvarez Esqueda Yasser Francisco
+
+Práctica 1: Operacion (Suma) 
+
+    void main() {
+      int numero1 = 7;
+      int numero2 = 8;
+      int resultado;
+
+      resultado = numero1+numero2;
+      print(resultado);
+
+    }

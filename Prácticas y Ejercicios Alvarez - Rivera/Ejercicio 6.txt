@@ -1,0 +1,20 @@
+Ejercicio: Funciones
+void main(){
+  final String? nombre = 'Yasser';
+  
+  saludar (nombre, 'Hola');
+  saludar2(nombre: nombre, mensaje: 'Greetings');
+  
+}
+
+//enviando como parametro [] se establece lo que hay dentro como valor por defecto
+void saludar(String? nombre, [String? mensaje = 'Hi']){
+  print('$mensaje $nombre');
+}
+
+void saludar2({
+  required String? nombre,
+  required String mensaje
+}){
+  print('$mensaje $nombre');
+}
