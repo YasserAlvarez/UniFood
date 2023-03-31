@@ -2,6 +2,10 @@
 
 Proyecto de Flutter sobre el desarrollo de una aplicación de tickets o pedidos
 
+[Universidad Politécnica de Durango](http://www.unipolidgo.edu.mx/sitio/) - Ingeniería en software 8°A
+- [Francisco Javier Rivera](https://github.com/MierderTheKat)
+- [Yasser Francisco Alvarez Esqueda](https://github.com/YasserAlvarez)
+
 ## Que se puede encontrar en el proyecto
 
 El proyecto contiene una aplicación móvil con la capacidad de tener 2 roles:
@@ -24,5 +28,3 @@ La aplicación utiliza dependencias para
 - Comprimir y optimizar imágenes.
 - Conectarse a Firebase.
 - Utilizar el storage de Firebase.
-
-
