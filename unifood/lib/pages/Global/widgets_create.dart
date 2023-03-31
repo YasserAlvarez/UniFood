@@ -1138,6 +1138,7 @@ class _Card_CarState extends State<Card_Car> {
 
                         Expanded(
                           child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Icon(
                                 Icons.price_change_sharp,
@@ -1145,7 +1146,30 @@ class _Card_CarState extends State<Card_Car> {
                                 color: Color(color_7),
                               ),
                               const VerticalDivider(),
-                              Text("MX\$ $_total"),
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 5),
+                                width: 120,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Color(color_5)
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'MX\$ $_total',
+                                      style: const TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
                             ],
                           ),
                         ),
