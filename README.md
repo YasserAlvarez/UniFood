@@ -2,9 +2,9 @@
 
 Proyecto de Flutter sobre el desarrollo de una aplicación de tickets o pedidos
 
-Universidad Politécnica de Durango - Ingeniería en software 8°A
-- Francisco Javier Rivera
-- Yasser Francisco Alvarez Esqueda
+[Universidad Politécnica de Durango](http://www.unipolidgo.edu.mx/sitio/) - Ingeniería en software 8°A
+- [Francisco Javier Rivera](https://github.com/MierderTheKat)
+- [Yasser Francisco Alvarez Esqueda](https://github.com/YasserAlvarez)
 
 ## Que se puede encontrar en el proyecto
 
