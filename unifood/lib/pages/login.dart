@@ -20,8 +20,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
 
-    matriculaTextController.text = '1111111111';
-    contrasenaTextController.text = '12345';
+    matriculaTextController.text = '';
+    contrasenaTextController.text = '';
 
     return Scaffold(
       resizeToAvoidBottomInset: false,

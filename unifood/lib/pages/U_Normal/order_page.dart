@@ -18,6 +18,7 @@ class _OrderPageState extends State<OrderPage> {
   late String _selectedMonth = '';
   late List<int> _years = [];
   late int _selectedYear = 1;
+  late int _selectedYearsend = 1;
 
   @override
   void initState() {
@@ -25,8 +26,9 @@ class _OrderPageState extends State<OrderPage> {
     DateTime now = DateTime.now();
     int year = now.year;
     int month = now.month;
-    _years = List.generate(10, (index) => year - index);
+    _years = List.generate(12, (index) => year - index);
     _selectedYear = year;
+    _selectedYearsend = year;
     _selectedMonth = _months[month-1];
   }
 
@@ -34,6 +36,20 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
 
     final Map userArg = ModalRoute.of(context)!.settings.arguments as Map;
+
+    Future<void> valueChange (String month, int year) async {
+      setState(() {
+        _selectedYearsend = 2015;
+        _selectedMonth = month;
+        _selectedYear = year;
+      });
+      await Future.delayed(const Duration(seconds: 1));
+      setState(() {
+        _selectedYearsend = year;
+      });
+    }
+
+
     return Scaffold(
       backgroundColor: Color(color_6),
 
@@ -91,9 +107,7 @@ class _OrderPageState extends State<OrderPage> {
                     underline: Container(height: 0),
                     value: _selectedYear,
                     onChanged: (year) {
-                      setState(() {
-                        _selectedYear = year!;
-                      });
+                      valueChange(_selectedMonth,year!);
                     },
                     items: _years.map((int year) {
                       return DropdownMenuItem<int>(
@@ -111,9 +125,7 @@ class _OrderPageState extends State<OrderPage> {
                     underline: Container(height: 0),
                     value: _selectedMonth,
                     onChanged: (String? month) {
-                      setState(() {
-                        _selectedMonth = month!;
-                      });
+                      valueChange(month!,_selectedYear);
                     },
                     items: _months.map((String month) {
                       return DropdownMenuItem<String>(
@@ -133,7 +145,7 @@ class _OrderPageState extends State<OrderPage> {
             ),
 
             FutureBuilder(
-              future: getOrder(userArg['user']['doc_id'],_selectedYear,_selectedMonth),
+              future: getOrder(userArg['user']['doc_id'],_selectedYearsend,_selectedMonth),
               builder: (context, snapshot) {
                 return snapshot.hasData
                   ? ListView.builder(
