@@ -90,6 +90,7 @@ Future<String> saveUser(int matricula, String nombre, String contrasena, String 
 }
 
 Future<String> updateUser(String docId, int matricula, String nombre, String contrasena, String correo, File? imagen, String urlImagen) async {
+  DocumentSnapshot<Map<String, dynamic>> thisUser = await firestore.collection('user').doc(docId).get();
 
   Map<dynamic, dynamic> validator = {};
   CollectionReference cRUsers = firestore.collection('user');
@@ -99,7 +100,7 @@ Future<String> updateUser(String docId, int matricula, String nombre, String con
     validator['data'] = doc.get('matricula');
   });
   if(validator.isNotEmpty){
-    if(matricula != validator['data']){
+    if(matricula != thisUser['matricula']){
       return validator['message'];
     }
   }
@@ -110,7 +111,7 @@ Future<String> updateUser(String docId, int matricula, String nombre, String con
     validator['data'] = doc.get('correo');
   });
   if(validator.isNotEmpty){
-    if(correo != validator['data']){
+    if(correo != thisUser['correo']){
       return validator['message'];
     }
   }
